@@ -1,50 +1,122 @@
----
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
----
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alyeska Services - Web, Tech & Notary</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      background-color: #003366;
+      color: white;
+      padding: 1rem 0;
+    }
+
+    header a img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-bottom: 4px solid #005599;
+    }
+
+    h1 {
+      margin-top: 0.5rem;
+      font-size: 2rem;
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 2rem;
+      background-color: #ffffff;
+    }
+
+    .service-box {
+      flex: 1 1 300px;
+      margin: 1rem;
+      padding: 1.5rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+
+    .service-box h2 {
+      color: #005599;
+      margin-top: 0;
+    }
+
+    .contact {
+      text-align: center;
+      padding: 2rem;
+      background-color: #eef6fb;
+    }
+
+    .contact h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .contact p {
+      font-size: 1.2rem;
+      color: #003366;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #003366;
+      color: white;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .services {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="Anchorage-skyline.jpg.jpg">
+      <img src="Anchorage-skyline.jpg.jpg" alt="Anchorage Skyline">
+    </a>
+    <h1>Alyeska Services</h1>
+    <p>Web Design | Tech Support | Notary Public</p>
+  </header>
+
+  <section class="services">
+    <div class="service-box">
+      <h2>Web Design</h2>
+      <p>Professional, mobile-responsive websites built to showcase your business or passion. Get a clean, custom site that works for you.</p>
+    </div>
+    <div class="service-box">
+      <h2>Tech Support</h2>
+      <p>Remote and local troubleshooting, software installs, virus removal, and tech help you can count on—available throughout Anchorage.</p>
+    </div>
+    <div class="service-box">
+      <h2>Notary Public</h2>
+      <p>Reliable and professional notary services, available by appointment. Serving Anchorage with care and confidentiality.</p>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>Call or text: <strong>907-531-1060</strong></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Alyeska Services – Proudly serving Anchorage, Alaska
+  </footer>
+
+</body>
 </html>
