@@ -31,6 +31,22 @@
       font-size: 2rem;
     }
 
+    .header-sitemap {
+      background-color: white;
+      padding: 0.5rem 0;
+      font-weight: bold;
+    }
+
+    .header-sitemap a {
+      color: black;
+      text-decoration: none;
+      margin: 0 0.75rem;
+    }
+
+    .header-sitemap a:hover {
+      text-decoration: underline;
+    }
+
     .services {
       display: flex;
       flex-wrap: wrap;
@@ -119,6 +135,11 @@
         flex-direction: column;
         align-items: center;
       }
+
+      .header-sitemap a {
+        display: block;
+        margin: 0.5rem 0;
+      }
     }
   </style>
 </head>
@@ -129,25 +150,29 @@
       <img src="Anchorage-skyline.jpg.jpg" alt="Anchorage Skyline">
     </a>
     <h1>Alyeska Services</h1>
-    <p>Web Design | Tech Support | Notary Public</p>
+    <nav class="header-sitemap">
+      <a href="#web-design">Web Design</a> |
+      <a href="#tech-support">Tech Support</a> |
+      <a href="/notary">Notary Public</a>
+    </nav>
   </header>
 
   <section class="services">
-    <div class="service-box">
+    <div class="service-box" id="web-design">
       <h2>Web Design</h2>
       <p>Professional, mobile-responsive websites built to showcase your business or passion. Get a clean, custom site that works for you.</p>
     </div>
-    <div class="service-box">
+    <div class="service-box" id="tech-support">
       <h2>Tech Support</h2>
       <p>Remote and local troubleshooting, software installs, virus removal, and tech help you can count on—available throughout Anchorage.</p>
     </div>
     <div class="service-box">
       <h2><a href="/notary">Notary Public</a></h2>
-      <p>Reliable and professional notary services, available by appointment. Serving Anchorage with care and confidentiality.</p>
+      <p>Reliable and professional notary services, available by appointment. Serving Anchorage and the surrounding areas with care and confidentiality.</p>
     </div>
   </section>
 
-  <section class="contact">
+  <section class="contact" id="contact">
     <h2>Contact Us</h2>
     <p>Call or text: <strong>907-531-1060</strong></p>
   </section>
@@ -164,7 +189,7 @@
   </section>
 
   <footer>
-    &copy; 2025 Alyeska Services – Proudly serving Anchorage, Alaska
+    &copy; 2025 Alyeska Services – Proudly serving Anchorage and the surrounding areas
   </footer>
 
 </body>
