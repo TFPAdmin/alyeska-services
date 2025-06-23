@@ -79,6 +79,10 @@
     }
 
     .info-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
       padding: 2rem 1rem;
       background-color: #e0e0e0;
     }
@@ -86,9 +90,9 @@
     .info-box {
       background-color: #d3d3d3;
       color: black;
-      margin: 1rem auto;
       padding: 1.5rem;
-      max-width: 800px;
+      flex: 1 1 300px;
+      max-width: 450px;
       border-radius: 8px;
       font-size: 1.1rem;
       line-height: 1.6;
@@ -109,35 +113,6 @@
       color: #003366;
     }
 
-    .sitemap {
-      background-color: white;
-      color: black;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-
-    .sitemap h2 {
-      margin-bottom: 1rem;
-    }
-
-    .sitemap ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .sitemap li {
-      margin: 0.5rem 0;
-    }
-
-    .sitemap a {
-      color: #000;
-      text-decoration: none;
-    }
-
-    .sitemap a:hover {
-      text-decoration: underline;
-    }
-
     footer {
       text-align: center;
       background-color: #003366;
@@ -146,7 +121,12 @@
       font-size: 0.9rem;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
+      .info-boxes {
+        flex-direction: column;
+        align-items: center;
+      }
+
       .services {
         flex-direction: column;
         align-items: center;
@@ -176,7 +156,7 @@
   <section class="services">
     <div class="service-box" id="web-design">
       <h2><a href="/web">Web Design</a></h2>
-      <p>Professional, mobile-responsive websites built to showcase your business or passion. Get a clean, custom site that works for you.</p>
+      <p></p>
     </div>
     <div class="service-box" id="notary-public">
       <h2><a href="/notary">Notary Public</a></h2>
@@ -186,10 +166,10 @@
 
   <section class="info-boxes">
     <div class="info-box">
-      <strong>Alyeska Notary</strong>, serving Anchorage and the surrounding areas since 2022. You can come to me, I can come to you, or we can meet over video chat—whatever works for you works for me.
+      <strong>Alyeska Web Design</strong>, if you need a beautiful yet simple website for your business or personal use, look no further than Alyeska Web Design, with flexible pricing we will get your online presence up and running.
     </div>
     <div class="info-box">
-      <strong>Alyeska Web Design</strong>, if you need a beautiful yet simple website for your business or personal use, look no further than Alyeska Web Design. With flexible pricing, we will get your online presence up and running.
+      <strong>Alyeska Notary</strong>, serving Anchorage and the surrounding areas since 2022. You can come to me, I can come to you, or we can meet over video chat, whatever works for you works for me.
     </div>
   </section>
 
